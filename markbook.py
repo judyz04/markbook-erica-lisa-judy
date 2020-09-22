@@ -1,6 +1,6 @@
 """
 Markbook Application
-Group members: 
+Group members: Erica, Lisa, Judy
 """
 from typing import Dict
 
