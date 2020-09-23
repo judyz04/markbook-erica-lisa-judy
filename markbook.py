@@ -3,7 +3,6 @@ Markbook Application
 Group members: Erica, Lisa, Judy
 """
 from typing import Dict
-import json
 
 
 def create_assignment(name: str, due: str, points: int) -> Dict:
@@ -36,10 +35,13 @@ def add_student_to_classroom(student: Dict, classroom: Dict):
         student: Student dict
         classroom: The classroom to add the student to
     """
+    first_name = input("What is the student's first name: ")
+    last_name = input("What is the student's last name: ")
+    student = {'First Name':first_name, 'Last Name':last_name}
+
     with open('markbook.txt', 'a') as f:
-      classroom.append(student)
-
-
+      f.read()
+      classroom.append(student)    
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
     """Removes student from classroom
@@ -48,7 +50,7 @@ def remove_student_from_classroom(student: Dict, classroom: Dict):
         student: The student to be removed
         classroom: the class from which the student will be removed.
     """
-    with open('markbook.txt', 'a') as f: 
+    with open('markbook.txt', 'a') as f:
       del classroom[student]
 
 
