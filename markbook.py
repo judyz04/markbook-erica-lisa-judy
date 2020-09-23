@@ -35,7 +35,8 @@ def add_student_to_classroom(student: Dict, classroom: Dict):
         student: Student dict
         classroom: The classroom to add the student to
     """
-    pass
+    with open('markbook.txt', 'a') as f:
+      f.write('\nStudent')
 
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
