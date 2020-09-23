@@ -3,6 +3,7 @@ Markbook Application
 Group members: Erica, Lisa, Judy
 """
 from typing import Dict
+import json
 
 
 def create_assignment(name: str, due: str, points: int) -> Dict:
@@ -36,7 +37,9 @@ def add_student_to_classroom(student: Dict, classroom: Dict):
         classroom: The classroom to add the student to
     """
     with open('markbook.txt', 'a') as f:
-      f.write('\nStudent')
+      f.write('New Student: ') in classroom
+      classroom.append(student)
+
 
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
